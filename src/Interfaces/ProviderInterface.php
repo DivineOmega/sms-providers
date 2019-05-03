@@ -4,5 +4,5 @@ namespace DivineOmega\SmsProviders\Interfaces;
 
 interface ProviderInterface
 {
-    public function getSupportedDestinationCountries() : array;
+    public function getSupportedDestinations() : array;
 }

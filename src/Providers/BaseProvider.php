@@ -8,17 +8,17 @@ use DivineOmega\SmsProviders\Interfaces\ProviderInterface;
 
 abstract class BaseProvider implements ProviderInterface
 {
-    protected $supportedDestinationCountryCodes = [];
+    protected $destinationCountries = [];
 
-    public function getSupportedDestinationCountries() : array
+    public function getSupportedDestinations() : array
     {
-        $supportedDestinationCountries = [];
+        $supportedDestinations = [];
         $countries = new Countries();
 
-        foreach ($this->supportedDestinationCountryCodes as $countryCode) {
-            $supportedDestinationCountries[] = $countries->getByIsoCode($countryCode);
+        foreach ($this->destinationCountries as $country) {
+            $supportedDestinations[] = $countries->getByName($country);
         }
 
-        return $supportedDestinationCountries;
+        return $supportedDestinations;
     }
 }

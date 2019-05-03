@@ -4,6 +4,8 @@ use DivineOmega\SmsProviders\Providers\SmsBroadcast;
 
 require_once __DIR__.'/../vendor/autoload.php';
 
-$supportedDestinationCountries = (new SmsBroadcast())->getSupportedDestinationCountries();
+$supportedDestinations = (new SmsBroadcast())->getSupportedDestinations();
 
-var_dump($supportedDestinationCountries);
+foreach ($supportedDestinations as $supportedDestination) {
+    echo $supportedDestination->name.PHP_EOL;
+}

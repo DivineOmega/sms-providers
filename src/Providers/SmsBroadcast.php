@@ -6,9 +6,9 @@ use DivineOmega\SmsProviders\Interfaces\ProviderInterface;
 
 class SmsBroadcast extends BaseProvider implements ProviderInterface
 {
-    protected $supportedDestinationCountryCodes = [
-        'AUS',
-        'NZL',
+    protected $destinationCountries = [
+        'Australia',
+        'New Zealand',
     ];
 
 }

@@ -1,5 +1,6 @@
 {
     "require": {
+        "php": ">=7.1",
         "divineomega/php-countries": "^2.1"
     },
     "autoload": {

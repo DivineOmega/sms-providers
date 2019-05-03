@@ -14,7 +14,7 @@ class Providers
         Twilio::class,
     ];
 
-    public function getByCallingCode(string $callingCode) : array
+    public function getByDestinationCallingCode(string $callingCode) : array
     {
         $providers = [];
 

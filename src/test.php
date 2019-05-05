@@ -1,6 +1,6 @@
 <?php
 
-use DivineOmega\SmsProviders\Utils\Providers;
+use DivineOmega\SmsProviders\Providers;
 
 require_once __DIR__.'/../vendor/autoload.php';
 

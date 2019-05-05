@@ -5,11 +5,15 @@ namespace DivineOmega\SmsProviders;
 use DivineOmega\Countries\Country;
 use DivineOmega\SmsProviders\Interfaces\ProviderInterface;
 use DivineOmega\SmsProviders\Providers\SmsBroadcast;
+use DivineOmega\SmsProviders\Providers\Textlocal;
+use DivineOmega\SmsProviders\Providers\Twilio;
 
 class Providers
 {
     const PROVIDERS_CLASS_NAMES = [
         SmsBroadcast::class,
+        Textlocal::class,
+        Twilio::class,
     ];
 
     public function all()

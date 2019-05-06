@@ -4,6 +4,7 @@ namespace DivineOmega\SmsProviders;
 
 use DivineOmega\Countries\Country;
 use DivineOmega\SmsProviders\Interfaces\ProviderInterface;
+use DivineOmega\SmsProviders\Providers\AmazonSNS;
 use DivineOmega\SmsProviders\Providers\SmsBroadcast;
 use DivineOmega\SmsProviders\Providers\Textlocal;
 use DivineOmega\SmsProviders\Providers\Twilio;
@@ -11,6 +12,7 @@ use DivineOmega\SmsProviders\Providers\Twilio;
 class Providers
 {
     const PROVIDERS_CLASS_NAMES = [
+        AmazonSNS::class,
         SmsBroadcast::class,
         Textlocal::class,
         Twilio::class,

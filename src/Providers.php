@@ -29,14 +29,14 @@ class Providers
         return $providers;
     }
 
-    public function getBySupportedDestinationCountry(Country $country)
+    public function getByDestinationCountry(Country $country)
     {
         $providers = [];
 
         /** @var ProviderInterface $provider */
         foreach ($this->all() as $provider) {
             /** @var Country $supportedDestinationCountry */
-            foreach ($provider->getSupportedDestinationCountries() as $supportedDestinationCountry) {
+            foreach ($provider->getSupportedDestinations() as $supportedDestinationCountry) {
                 if ($supportedDestinationCountry->isoCodeAlpha3 === $country->isoCodeAlpha3) {
                     $providers[] = $provider;
                     break;
